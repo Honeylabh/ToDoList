@@ -1,38 +1,129 @@
-.App {
+body {
+  background-color: skyblue; /* Light gray background for the whole page */
+  color: #007bff; /* Dark gray text color */
+}
+
+.todo {
   text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #fff; /* White background for the todo container */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px grey; /* Soft shadow effect */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #007bff; /* Blue heading color */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.add-task {
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.add-task input[type="text"] {
+  padding: 8px;
+  font-size: 1rem;
+  width: 60%;
+  border: 1px solid #ced4da; /* Light gray border color */
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.add-task input[type="text"]:focus {
+  border-color: #80bdff; /* Blue border color on focus */
+}
+
+.add-task button {
+  padding: 8px 20px;
+  font-size: 1rem;
+  background-color: #007bff; /* Blue button background color */
   color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.add-task button:hover {
+  background-color: #0056b3; /* Darker blue button color on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filter-task button {
+  margin-right: 10px;
+  font-size: 1rem;
+  padding: 6px 12px;
+  background-color: #007bff; /* Blue button background color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-task button:hover {
+  background-color: #0056b3; /* Darker blue button color on hover */
+}
+
+.all-task {
+  list-style: none;
+  padding: 0;
+}
+
+.task-edit {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-edit input[type="text"] {
+  padding: 8px;
+  font-size: 1rem;
+  width: 60%;
+  border: 1px solid #ced4da; /* Light gray border color */
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.task-edit input[type="text"]:focus {
+  border-color: #80bdff; /* Blue border color on focus */
+}
+
+.task-edit button {
+  padding: 6px 12px;
+  font-size: 1rem;
+  background-color: #007bff; /* Blue button background color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.task-edit button:hover {
+  background-color: #0056b3; /* Darker blue button color on hover */
+}
+
+.task-edit span {
+  flex-grow: 1;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.fa-circle-xmark:before {
+  content: "\f10c";
+}
+
+.fa-circle-check:before {
+  content: "\f111";
+}
+
+.fa-pen-to-square:before {
+  content: "\f14b";
+}
+
+.fa-trash:before {
+  content: "\f2ed";
 }
